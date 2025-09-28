@@ -2,6 +2,7 @@
 
 // ヌル文字になるまで ＆＆サイズの回数だけ 探索文字列が出現するかを調べる。第二引数の終端まで一致してる場合のみその部分文字列の先頭を返す。
 // 第二引数のn文字目までが存在するかどうかではない。
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	const char	*s1;

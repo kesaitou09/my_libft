@@ -1,4 +1,45 @@
 #include "libft.h"
 
-// 実装: atoi
+static int ft_issep(char c);
 
+
+int ft_atoi(const char *nptr)
+{
+	long long	result;
+	int			sign;
+
+	sign = 1;
+	while (ft_issep(*nptr))
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
+	{
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;		
+	}
+	result = 0;
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		result = result * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (result * sign);
+}
+
+static int ft_issep(char c)
+{
+	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r');
+}
+
+
+//int main(void)
+//{
+//	printf("%d\n",atoi("-2147483649"));
+//	printf("%d\n",ft_atoi("-2147483649"));
+	
+	
+	
+	
+	
+	
+//}

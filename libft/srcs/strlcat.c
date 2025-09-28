@@ -1,5 +1,8 @@
 #include "libft.h"
 
+//size - dst_len > 0としてるのはサイズがない場合にヌル文字が入るのを防ぐため
+//コピーする回数は　size - dst_len - 1回　はヌル文字終端を保証するため
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;
@@ -8,14 +11,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	j;
 
 	src_len = strlen(src);
-	i = 0;
-	while (dst[i])
-		i++;
-	dst_len = i;
+	dst_len = strlen(dst);
 	j = 0;
-	if (size > dst_len)
+	i = dst_len;
+	if (size - dst_len > 0)
 	{
-		while (j < size - 1)
+		while (j < size - dst_len - 1)
 			dst[i++] = src[j++];
 		dst[i] = '\0';
 	}
