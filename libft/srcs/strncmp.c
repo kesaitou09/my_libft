@@ -23,16 +23,5 @@ int main(void)
 	printf("lib %d\n",strncmp("abo","ab",3));
 	//printf("my %d\n",ft_strncmp("abc","ab",3));
 	//printf("my %d\n",ft_strncmp("abc","ab",3));
-	//printf("my %d\n",ft_strncmp("abc","ab",3));
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//printf("my %d\n",ft_strncmp("abc","ab",3));	
 }
