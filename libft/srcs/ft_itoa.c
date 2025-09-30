@@ -49,7 +49,7 @@ static int	count_len(int nbr)
 	return (len);
 }
 
-int	main(void)
-{
-	printf("%s\n", ft_itoa(334));
-}
+//int	main(void)
+//{
+//	printf("%s\n", ft_itoa(334));
+//}

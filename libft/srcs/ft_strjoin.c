@@ -1,8 +1,5 @@
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*arr;
@@ -20,36 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (arr);
 }
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	if (!s)
-		return (0);
-	while (s[len])
-		len++;
-	return (len);
-}
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char	*p1;
-	unsigned char	*p2;
-	size_t			i;
-
-	p1 = (unsigned char *)dest;
-	p2 = (unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		*p1 = *p2;
-		(p1++, p2++, i++);
-	}
-	return (dest);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_strjoin(NULL, "bbbb"));
-}
+//int	main(void)
+//{
+//	printf("%s\n", ft_strjoin(NULL, "bbbb"));
+//}

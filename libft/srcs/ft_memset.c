@@ -17,22 +17,14 @@ void *ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-int main(void)
-{
-	char	z[5];
-	int		int_zero[5];
+//int main(void)
+//{
+//	char	z[5];
+//	int		int_zero[5];
 
-	ft_memset(z,'z',4);
-	ft_memset(int_zero,0,4);
+//	ft_memset(z,'z',4);
+//	ft_memset(int_zero,0,4);
 	
-	printf("%s\n",z);
-	printf("%d",int_zero[3]);
-	
-	
-	
-	
-	
-	
-	
-	
-}
+//	printf("%s\n",z);
+//	printf("%d",int_zero[3]);
+//}

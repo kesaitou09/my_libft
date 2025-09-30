@@ -1,8 +1,10 @@
 #include "libft.h"
 
+static size_t	ft_strnlen(const char *s, size_t n);
+static char	*ft_strndup(const char *s, size_t n);
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*arr;
 	size_t	sub_len;
 
 	if (start >= ft_strlen(s))
@@ -39,7 +41,7 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (arr);
 }
 
-int	main(void)
-{
-	printf("%s\n", ft_substr("abcdefg", 2, strnlen("abcdeefg", 20)));
-}
+//int	main(void)
+//{
+//	printf("%s\n", ft_substr("abcdefg", 2, strnlen("abcdeefg", 20)));
+//}

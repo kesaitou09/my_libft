@@ -21,11 +21,11 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 
-int main(void)
-{
-	char str1[] = "abcd";
-	char str2[] = "ab";
+//int main(void)
+//{
+//	char str1[] = "abcd";
+//	char str2[] = "ab";
 
-	printf("my %d\n",ft_memcmp(str1,str2,30));
-	printf("libc %d\n",memcmp(str1,str2,30));
-}
+//	printf("my %d\n",ft_memcmp(str1,str2,30));
+//	printf("libc %d\n",memcmp(str1,str2,30));
+//}

@@ -15,7 +15,7 @@ int ft_atoi(const char *nptr)
 	{
 		if (*nptr == '-')
 			sign = -1;
-		nptr++;		
+		nptr++;	
 	}
 	result = 0;
 	while (*nptr >= '0' && *nptr <= '9')
@@ -32,14 +32,14 @@ static int ft_issep(char c)
 }
 
 
-//int main(void)
-//{
-//	printf("%d\n",atoi("-2147483649"));
-//	printf("%d\n",ft_atoi("-2147483649"));
+int main(void)
+{
+	//printf("%d\n",atoi("-2147483649"));
+	printf("%d\n",ft_atoi("-0"));
 	
 	
 	
 	
 	
 	
-//}
+}

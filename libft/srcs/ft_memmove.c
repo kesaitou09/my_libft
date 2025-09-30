@@ -25,13 +25,13 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	return (p1);
 }
 
-int main(void)
-{
-	char str1[] = "abcdefg";
-	char str2[] = "abcdefg";
+//int main(void)
+//{
+//	char str1[] = "abcdefg";
+//	char str2[] = "abcdefg";
 
-	ft_memmove(&str1[6],&str1[0],1);
-	printf("%s\n",str1);
-	memmove(&str2[6],&str2[0],1);
-	printf("%s\n",str2);
-}
+//	ft_memmove(&str1[6],&str1[0],1);
+//	printf("%s\n",str1);
+//	memmove(&str2[6],&str2[0],1);
+//	printf("%s\n",str2);
+//}

@@ -2,14 +2,17 @@
 
 static size_t	ft_strnlen(const char *s, size_t n);
 static bool		is_set(char const *set, char c);
-void			*ft_memcpy(void *dest, const void *src, size_t n);
 static char		*ft_strndup(const char *s, size_t n);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
+	size_t		len;
 	const char	*start;
+	const char	*end;
+	char		*res;
 
+	if (!s1 || !set)
+		return (NULL);	
 	len = 0;
 	while (*s1 && is_set(set, *s1))
 		s1++;
@@ -58,25 +61,8 @@ static size_t	ft_strnlen(const char *s, size_t n)
 	return (len);
 }
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char	*p1;
-	unsigned char	*p2;
-	size_t			i;
-
-	p1 = (unsigned char *)dest;
-	p2 = (unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		*p1 = *p2;
-		(p1++, p2++, i++);
-	}
-	return (dest);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_strtrim("    \n\n\n\aaaaabbffnejhjehkj     \n\n\n",
-			" \n"));
-}
+// int	main(void)
+//{
+//	printf("%s\n", ft_strtrim("    \n\n\n\aaaaabbffnejhjehkj     \n\n\n",
+//			" \n"));
+// }

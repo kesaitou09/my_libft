@@ -6,33 +6,35 @@
 #    By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/27 14:12:40 by kesaitou          #+#    #+#              #
-#    Updated: 2025/09/29 19:55:43 by kesaitou         ###   ########.fr        #
+#    Updated: 2025/10/01 00:25:45 by kesaitou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-CCFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 INCS = -I includes
 AR = ar
 ARFLAGS = rcs
 
-SRCS = srcs/ft_itoa.c srcs/ft_putstr_fd.c srcs/ft_strmapi.c srcs/isalpha.c \
-       srcs/memmove.c srcs/strlcat.c srcs/strrchr.c srcs/atoi.c \
-       srcs/ft_putchar_fd.c srcs/ft_split.c srcs/ft_strtrim.c srcs/isascii.c \
-       srcs/memchr.c srcs/memset.c srcs/strlcpy.c srcs/tolower.c \
-       srcs/bzero.c srcs/ft_putendl_fd.c srcs/ft_striteri.c srcs/ft_substr.c \
-       srcs/isdigit.c srcs/memcmp.c srcs/strchr.c srcs/strlen.c\
-       srcs/toupper.c srcs/calloc.c srcs/ft_putnbr_fd.c srcs/ft_strjoin.c srcs/isalnum.c \
-       srcs/isprint.c srcs/memcpy.c srcs/strdup.c srcs/strncmp.c srcs/strnstr.c
+SRCS = srcs/ft_itoa.c srcs/ft_putstr_fd.c srcs/ft_strmapi.c srcs/ft_isalpha.c \
+       srcs/ft_memmove.c srcs/ft_strlcat.c srcs/ft_strrchr.c srcs/ft_atoi.c \
+       srcs/ft_putchar_fd.c srcs/ft_split.c srcs/ft_strtrim.c srcs/ft_isascii.c \
+       srcs/ft_memchr.c srcs/ft_memset.c srcs/ft_strlcpy.c srcs/ft_tolower.c \
+       srcs/ft_bzero.c srcs/ft_putendl_fd.c srcs/ft_striteri.c srcs/ft_substr.c \
+       srcs/ft_isdigit.c srcs/ft_memcmp.c srcs/ft_strchr.c srcs/ft_strlen.c \
+       srcs/ft_toupper.c srcs/ft_calloc.c srcs/ft_putnbr_fd.c srcs/ft_strjoin.c \
+       srcs/ft_isalnum.c srcs/ft_isprint.c srcs/ft_memcpy.c srcs/ft_strdup.c \
+       srcs/ft_strncmp.c srcs/ft_strnstr.c
 
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(AR) $(ARFLAGS) $(OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 %.o : %.c
 	$(CC) $(CFLAGS) $(INCS) -c $< -o $@

@@ -6,6 +6,7 @@ char	*ft_strdup(const char *s)
 	size_t len;
 	size_t i;
 
+	i = 0;
 	len = ft_strlen(s);
 	arr = malloc(sizeof(char) * (len + 1));
 	while (i < len)
@@ -16,15 +17,8 @@ char	*ft_strdup(const char *s)
 	arr[i] = '\0';
 	return (arr);
 }
-
-int main(void)
-{
-	printf("%s\n",ft_strdup(""));
-	printf("%s\n",strdup(""));
-
-	
-	
-	
-	
-	
-}
+//int main(void)
+//{
+//	printf("%s\n",ft_strdup(""));
+//	printf("%s\n",strdup(""));
+//}

@@ -5,7 +5,6 @@ static size_t	ft_strnlen(const char *s, size_t n);
 static size_t	count_words(const char *s, char c);
 static size_t	word_len(const char *s, char c);
 static void		free_split(char **s);
-void			*ft_memcpy(void *dest, const void *src, size_t n);
 
 char	**ft_split(char const *s, char c)
 {
@@ -114,32 +113,15 @@ static void	free_split(char **s)
 	free(s);
 }
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char	*p1;
-	unsigned char	*p2;
-	size_t			i;
+//int	main(void)
+//{
+//	char	**arr;
 
-	p1 = (unsigned char *)dest;
-	p2 = (unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		*p1 = *p2;
-		(p1++, p2++, i++);
-	}
-	return (dest);
-}
-
-int	main(void)
-{
-	char	**arr;
-
-	//arr = ft_split("fijfijai@aaaaaaaaa@dddd@", 'f');
-	// printf("%zu", count_words("a n n nassk nnn", ' '));
-	printf("%p\n",ft_split("ABCDEF",'a')[1]);
-	//for (int i = 0; arr[i]; i++)
-	//{
-	//	printf("%s\n", arr[i]);
-	//}
-}
+//	arr = ft_split("fijfijai@aaaaaaaaa@dddd@", 'f');
+//	 printf("%zu", count_words("a n n nassk nnn", ' '));
+//	printf("%p\n",ft_split("ABCDEF",'a')[1]);
+//	for (int i = 0; arr[i]; i++)
+//	{
+//		printf("%s\n", arr[i]);
+//	}
+//}

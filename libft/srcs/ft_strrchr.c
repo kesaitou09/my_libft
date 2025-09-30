@@ -3,7 +3,6 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-	const char	*end;
 	const char	*p;
 
 	p = s;
@@ -22,9 +21,9 @@ char *ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-int main(void)
-{
-	printf("%s\n",strrchr("abbaaaaabbaifififohf ",'a'));
-	printf("%s\n",ft_strrchr("abbaaaaabbaifififohf ",'a'));
-	//printf("%s\n",strrchr("abbaaaaabbaifififohf",'a'));
-}
+//int main(void)
+//{
+//	printf("%s\n",strrchr("abbaaaaabbaifififohf ",'a'));
+//	printf("%s\n",ft_strrchr("abbaaaaabbaifififohf ",'a'));
+//	printf("%s\n",strrchr("abbaaaaabbaifififohf",'a'));
+//}

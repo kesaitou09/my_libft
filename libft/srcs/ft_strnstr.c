@@ -32,12 +32,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-int	main(void)
-{
-	printf("libc %s\n", strnstr("abcdefhfiaefj", NULL, 30));
-	printf("my %s\n", ft_strnstr("abcdefhfiaefj", NULL, 30));
-	// printf("%s\n",strnstr("abcdefhijk","de",3));
-	// printf("%s\n",strnstr("abcdefhijk","de",3));
-	// printf("%s\n",strnstr("abcdefhijk","de",3));
-	// printf("%s\n",strnstr("abcdefhijk","de",3));
-}
+//int	main(void)
+//{
+//	printf("libc %s\n", strnstr("abcdefhfiaefj", NULL, 30));
+//	printf("my %s\n", ft_strnstr("abcdefhfiaefj", NULL, 30));
+//	 printf("%s\n",strnstr("abcdefhijk","de",3));
+//	 printf("%s\n",strnstr("abcdefhijk","de",3));
+//	 printf("%s\n",strnstr("abcdefhijk","de",3));
+//	 printf("%s\n",strnstr("abcdefhijk","de",3));
+//}
