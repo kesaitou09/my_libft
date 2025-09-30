@@ -6,3 +6,11 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);	
 }
+
+int main(void)
+{
+	printf("%d\n",ft_isascii('\0'));
+	printf("%d\n",isascii('\0'));
+	
+	
+}

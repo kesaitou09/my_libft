@@ -22,7 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 int	main(void)
 {
 	char buf1[] = "";
-	char buf2[] = "jjkkkk";
+	char buf2[] = "jjkkk";
 	char buf3[] = "aaaaaaaaaa";
 
 	char dst1[10];
@@ -31,8 +31,10 @@ int	main(void)
 	char dst4[10];
 	char dst5[10];
 
-	printf("dst1  %zu\n%s\n", ft_strlcpy(dst1, buf2, sizeof(dst1)), dst1);
-	printf("dst2  %zu\n%s\n", strlcpy(dst2, buf2, sizeof(dst2)), dst2);
-	printf("dst3  %zu\n%s\n", ft_strlcpy(dst3, buf3, sizeof(dst3)), dst3);
-	printf("dst4  %zu\n%s\n", strlcpy(dst4, buf3, sizeof(dst4)), dst4);
+	size_t i = 11;
+	size_t j = 11;
+	printf("dst1  %zu\n%s\n", ft_strlcpy(dst1, buf2, i), dst1);
+	//printf("dst2  %zu\n%s\n", strlcpy(dst2, buf2, j), dst2);
+	//printf("dst3  %zu\n%s\n", ft_strlcpy(dst3, buf3, sizeof(dst3)), dst3);
+	//printf("dst4  %zu\n%s\n", strlcpy(dst4, buf3, sizeof(dst4)), dst4);
 }

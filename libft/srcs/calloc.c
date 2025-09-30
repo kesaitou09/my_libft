@@ -6,7 +6,7 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 21:51:54 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/09/28 23:09:23 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/09/29 19:54:17 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,5 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(arr,0,total_size);
 	return (arr);
 }
+
+

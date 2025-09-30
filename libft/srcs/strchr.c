@@ -14,9 +14,20 @@ char *ft_strchr(const char *s, int c)
 	{
 		if (*s == c)
 		{
-			return (s);
+			return (char *)(s);
 		}
 		s++;
 	}
 	return (NULL);
+}
+
+int main(void)
+{
+	const char str[] = "ababbababa";
+	printf("%p",strchr(str,'\0'));
+	
+	
+	
+	
+	
 }
