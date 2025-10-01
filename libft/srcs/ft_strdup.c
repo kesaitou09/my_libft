@@ -2,9 +2,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	char *arr;
-	size_t len;
-	size_t i;
+	char	*arr;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
 	len = ft_strlen(s);
@@ -17,8 +17,8 @@ char	*ft_strdup(const char *s)
 	arr[i] = '\0';
 	return (arr);
 }
-//int main(void)
+// int main(void)
 //{
 //	printf("%s\n",ft_strdup(""));
 //	printf("%s\n",strdup(""));
-//}
+// }

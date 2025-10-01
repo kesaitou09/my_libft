@@ -12,21 +12,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*p == c1)
-		{
-			return (void *)(p);
-		}
-		(p++, i++);
+			return ((void *)(p));
+		p++;
+		i++;
 	}
 	return (NULL);
 }
 
-//int	main(void)
+// int	main(void)
 //{
-//	 char str2[] = "abcdefghi";
-//	 char str3[] = "abcdefghi";
+//		char str2[] = "abcdefghi";
+//		char str3[] = "abcdefghi";
 
-//	 printf("%s\n",(char *)ft_memchr(str2,'a',11));
-//	 printf("%s\n",(char *)memchr(str2,'a',11));
+//		printf("%s\n",(char *)ft_memchr(str2,'a',11));
+//		printf("%s\n",(char *)memchr(str2,'a',11));
 
 //	unsigned char s[] = "abcdefgh";
 //	char *p1;

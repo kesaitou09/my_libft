@@ -1,12 +1,11 @@
 #include "libft.h"
 
-static int ft_issep(char c);
+static int	ft_issep(char c);
 
-
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	long long	result;
-	int			sign;
+	int	result;
+	int	sign;
 
 	sign = 1;
 	while (ft_issep(*nptr))
@@ -15,7 +14,7 @@ int ft_atoi(const char *nptr)
 	{
 		if (*nptr == '-')
 			sign = -1;
-		nptr++;	
+		nptr++;
 	}
 	result = 0;
 	while (*nptr >= '0' && *nptr <= '9')
@@ -26,20 +25,15 @@ int ft_atoi(const char *nptr)
 	return (result * sign);
 }
 
-static int ft_issep(char c)
+static int	ft_issep(char c)
 {
-	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r');
+	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f'
+		|| c == '\r');
 }
 
+// int main(void)
+//{
+//	//printf("%d\n",atoi("-2147483649"));
+//	printf("%d\n",ft_atoi("-0"));
 
-int main(void)
-{
-	//printf("%d\n",atoi("-2147483649"));
-	printf("%d\n",ft_atoi("-0"));
-	
-	
-	
-	
-	
-	
-}
+//}

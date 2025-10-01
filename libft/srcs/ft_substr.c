@@ -1,7 +1,7 @@
 #include "libft.h"
 
 static size_t	ft_strnlen(const char *s, size_t n);
-static char	*ft_strndup(const char *s, size_t n);
+static char		*ft_strndup(const char *s, size_t n);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -41,7 +41,7 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (arr);
 }
 
-//int	main(void)
+// int	main(void)
 //{
 //	printf("%s\n", ft_substr("abcdefg", 2, strnlen("abcdeefg", 20)));
-//}
+// }

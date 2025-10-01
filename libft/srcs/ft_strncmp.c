@@ -5,6 +5,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	while ((s1[i] || s2[i]) && i < n)
 	{
 		if (s1[i] != s2[i])
@@ -16,12 +18,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-
-//int main(void)
+// int main(void)
 //{
 //	printf("my %d\n",ft_strncmp("abo","ab",3));
 //	printf("lib %d\n",strncmp("abo","ab",3));
 //	printf("my %d\n",ft_strncmp("abc","ab",3));
 //	printf("my %d\n",ft_strncmp("abc","ab",3));
-//	printf("my %d\n",ft_strncmp("abc","ab",3));	
-//}
+//	printf("my %d\n",ft_strncmp("abc","ab",3));
+// }

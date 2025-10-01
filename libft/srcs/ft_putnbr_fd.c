@@ -2,8 +2,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long long nbr;
-	char c;
+	long long	nbr;
+	char		c;
 
 	nbr = n;
 	if (nbr < 0)

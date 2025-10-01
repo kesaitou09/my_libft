@@ -1,36 +1,34 @@
 #include "libft.h"
 
 static size_t	ft_strnlen(const char *s, size_t n);
-static bool		is_set(char const *set, char c);
+static int		is_set(char const *set, char c);
 static char		*ft_strndup(const char *s, size_t n);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t		len;
-	const char	*start;
+	size_t		s1_len;
 	const char	*end;
-	char		*res;
 
 	if (!s1 || !set)
-		return (NULL);	
-	len = 0;
+		return (NULL);
+	s1_len = ft_strlen(s1);
+	end = s1 + s1_len;
 	while (*s1 && is_set(set, *s1))
 		s1++;
-	start = s1;
-	while (*s1 && !is_set(set, *s1))
-		(s1++, len++);
-	return (ft_strndup(start, len));
+	while (s1 < end && is_set(set, *(end - 1)))
+		end--;
+	return (ft_strndup(s1, end - s1));
 }
 
-static bool	is_set(char const *set, char c)
+static int	is_set(char const *set, char c)
 {
 	while (*set)
 	{
 		if (*set == c)
-			return (true);
+			return (1);
 		set++;
 	}
-	return (false);
+	return (0);
 }
 
 static char	*ft_strndup(const char *s, size_t n)
@@ -63,6 +61,5 @@ static size_t	ft_strnlen(const char *s, size_t n)
 
 // int	main(void)
 //{
-//	printf("%s\n", ft_strtrim("    \n\n\n\aaaaabbffnejhjehkj     \n\n\n",
-//			" \n"));
+//	printf("%s\n", ft_strtrim("\n\n\njjjjaaaaabbffnejhjehkj\n\n\n", " \n"));
 // }

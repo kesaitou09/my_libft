@@ -1,13 +1,13 @@
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*p1;
 	const unsigned char	*p2;
 	size_t				i;
 
-	p1 = (unsigned char *) dest;
-	p2 = (unsigned char *) src;
+	p1 = (unsigned char *)dest;
+	p2 = (unsigned char *)src;
 	i = 0;
 	if (p1 < p2)
 	{
@@ -25,7 +25,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	return (p1);
 }
 
-//int main(void)
+// int main(void)
 //{
 //	char str1[] = "abcdefg";
 //	char str2[] = "abcdefg";

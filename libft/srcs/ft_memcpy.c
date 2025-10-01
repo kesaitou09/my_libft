@@ -12,12 +12,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (i < n)
 	{
 		*p1 = *p2;
-		(p1++, p2++, i++);
+		p1++;
+		p2++;
+		i++;
 	}
 	return (p1);
 }
 
-//int	main(void)
+// int	main(void)
 //{
 //	int x = 4299;
 //	int y = 0;
@@ -27,5 +29,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 //	printf("%d\n", x);
 //	//ft_memcpy(&y, &x, 4);
 
-	
 //}

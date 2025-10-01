@@ -5,39 +5,31 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	const char	*s1;
-	const char	*s2;
-	const char	*punc;
-	size_t		i;
+	size_t	little_len;
+	size_t	i;
 
 	i = 0;
+	if (!big || !little)
+		return (NULL);
 	if (!*little)
-		return (char *)(big);
-	(s1 = big, s2 = little, punc = NULL);
-	while (*s1 && i < len)
+		return ((char *)(big));
+	little_len = ft_strlen(little);
+	while (*big && i < len && little_len <= len - i)
 	{
-		if (*s1 == *s2)
-		{
-			punc = s1;
-			(s1++, s2++, i++);
-			while (*s1 && i < len && (*s1 == *s2))
-				(s1++, s2++, i++);
-			if (!*s2)
-				return (char *)(punc);
-			s2 = little;
-		}
-		else
-			(s1++, i++);
+		if (!ft_strncmp(big, little, little_len))
+			return ((char *)big);
+		big++;
+		i++;
 	}
 	return (NULL);
 }
 
-//int	main(void)
+// int	main(void)
 //{
 //	printf("libc %s\n", strnstr("abcdefhfiaefj", NULL, 30));
 //	printf("my %s\n", ft_strnstr("abcdefhfiaefj", NULL, 30));
-//	 printf("%s\n",strnstr("abcdefhijk","de",3));
-//	 printf("%s\n",strnstr("abcdefhijk","de",3));
-//	 printf("%s\n",strnstr("abcdefhijk","de",3));
-//	 printf("%s\n",strnstr("abcdefhijk","de",3));
-//}
+//		printf("%s\n",strnstr("abcdefhijk","de",3));
+//		printf("%s\n",strnstr("abcdefhijk","de",3));
+//		printf("%s\n",strnstr("abcdefhijk","de",3));
+//		printf("%s\n",strnstr("abcdefhijk","de",3));
+// }
