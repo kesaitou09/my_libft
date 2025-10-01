@@ -6,7 +6,7 @@
 #    By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/27 14:12:40 by kesaitou          #+#    #+#              #
-#    Updated: 2025/10/01 00:25:45 by kesaitou         ###   ########.fr        #
+#    Updated: 2025/10/02 02:33:58 by kesaitou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,13 @@ SRCS = srcs/ft_itoa.c srcs/ft_putstr_fd.c srcs/ft_strmapi.c srcs/ft_isalpha.c \
        srcs/ft_isalnum.c srcs/ft_isprint.c srcs/ft_memcpy.c srcs/ft_strdup.c \
        srcs/ft_strncmp.c srcs/ft_strnstr.c
 
+BONUS = srcs/ft_lstnew_bonus.c srcs/ft_lstadd_front_bonus.c srcs/ft_lstsize_bonus.c \
+		srcs/ft_lstlast_bonus.c srcs/ft_lstadd_back_bonus.c srcs/ft_lstdelone_bonus.c \
+		srcs/ft_lstclear_bonus.c srcs/ft_lstiter_bonus.c srcs/ft_lstmap_bonus.c
+
+
 OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS:.c=.o)
 
 all : $(NAME)
 
@@ -36,10 +42,15 @@ $(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 	ranlib $(NAME)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(BONUS_OBJS)
+	ranlib $(NAME)
+
 %.o : %.c
 	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
+	
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
